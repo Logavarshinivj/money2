@@ -11,7 +11,7 @@ dotenv.config()
 //middlewares
 app.use(
     cors({
-      origin: 'http://localhost:4000'      
+      origin: '*'      
     })
   );
 app.use(morgan("dev"))
@@ -34,6 +34,8 @@ connectDb()
 
 
 const PORT= process.env.PORT
+
+
 
 app.listen(PORT,()=>{
     console.log(`Server started running on port ${PORT}🔥🔥`)
